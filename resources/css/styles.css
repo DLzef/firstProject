@@ -38,7 +38,7 @@ nav {
 
 #about {
     text-align: left;
-    transform: translateX(30%);
+    padding-left: 30%;
     padding-top: 50px;
 }
 #about p {
@@ -55,7 +55,7 @@ nav {
     font-weight: bolder;
     color: blueviolet;
     text-align: left;
-    transform: translateX(30%);
+    padding-left: 30%;
 }
 
 footer {
