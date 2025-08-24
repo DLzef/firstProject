@@ -1,0 +1,13 @@
+body {
+    background-color: #fff;
+    text-align: center;             /* mittig plazieren */
+    position: relative; 
+    transform: translateX(-15%);                /* nach links verschieben */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo--header {
+    color: #000;
+    font-size: 30px;
+    font-weight: normal;
+}
