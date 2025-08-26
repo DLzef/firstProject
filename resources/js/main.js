@@ -1,3 +1,5 @@
+//Birthday countdown code
+
 function daysLeft() {
     const today = new Date();
     const target = new Date('2026-07-05');
@@ -9,12 +11,12 @@ document.getElementById('birthday').textContent = `Tage übrig bis zu meinem Geb
 
 daysLeft();
 
+// Rock paper scissors code
+
 const getUserChoice = userInput => {
 
   if (userInput === 'Stein' || userInput === 'Papier' || userInput === 'Schere' || userInput === 'Bombe') {
     return userInput;
-  } else {
-    return null; // Return null for invalid input
   }
 };
 
@@ -28,8 +30,6 @@ const getComputerChoice = () => {
       return 'Papier';
     case 2:
       return 'Schere';
-    default:
-      return 'Stein';
   }
 };
 
@@ -63,9 +63,6 @@ const determineWinner = (userChoice, computerChoice) => {
 
 const playGame = (userInput) => {
   const userChoice = getUserChoice(userInput);
-  if (!userChoice) {
-  return; // Exit's if user input is invalid.
-  }
   const computerChoice = getComputerChoice();
   document.getElementById('user-choice').textContent = `Deine Auswahl: ${userChoice}`;
   document.getElementById('computer-choice').textContent = `Die Auswahl des Computers: ${computerChoice}`;
