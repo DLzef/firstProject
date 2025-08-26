@@ -12,7 +12,6 @@ document.getElementById('birthday').textContent = `Tage übrig bis zu meinem Geb
 daysLeft();
 
 // Rock paper scissors code
-
 const getUserChoice = userInput => {
 
   if (userInput === 'Stein' || userInput === 'Papier' || userInput === 'Schere' || userInput === 'Bombe') {
