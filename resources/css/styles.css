@@ -6,7 +6,16 @@ body {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
-    padding-top: 10px;
+    padding-top: 30px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, lightblue, white);
 }
 
 #logo--header {
@@ -40,6 +49,7 @@ nav {
     text-align: left;
     padding-left: 30%;
     padding-top: 50px;
+    scroll-margin-top: 30px;
 }
 #about p {
     display: flex;
@@ -56,6 +66,41 @@ nav {
     color: blueviolet;
     text-align: left;
     padding-left: 30%;
+}
+
+#projects {
+    text-align: left;
+    padding-left: 30%;
+    padding-top: 50px;
+    scroll-margin-top: 30px;
+}
+
+
+.project--title h3 {
+    display: inline;
+}
+
+.project--image {
+    width: 30%;
+    height: auto;
+}
+
+.project--image2 {
+    width: 75%;
+    height: auto;
+}
+
+summary {
+    font-weight: bold;
+}
+
+details {
+    cursor: pointer;
+}
+
+video {
+    width: 50%;
+    height: auto;
 }
 
 footer {
