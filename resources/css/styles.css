@@ -101,6 +101,12 @@ video {
     height: auto;
 }
 
+.project--footer--p {
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 10px;
+}
+
 footer {
     text-align: right;
     padding: 10px 20px;

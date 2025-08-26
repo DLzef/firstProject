@@ -43,7 +43,6 @@
             
                 <div>
                     <p id="birthday"></p>
-                    <script src="js/main.js"></script>
                 </div>
 
             <section id="projects">
@@ -55,17 +54,23 @@
                     <img src="pictures/taschenrechnerJava.jpg"
                          alt="Erstes Java Projekt mit IntelliJ IDEA"
                          class="project--image">
-                     <p>Mein erstes Projekt - Ein einfacher Taschenrechner mit Java</p>
+                     <p class="project--footer--p">Mein erstes Projekt - Ein einfacher Taschenrechner mit Java</p>
                 </details>
 
                 <details class="project">
                     <summary class="project--title">
                         <h3>Schere, Stein, Papier!</h3>
                     </summary>
-                    <img src="pictures/oneJsProject.png"
-                         alt="Schere Stein Papier mit Javascript"
-                         class="project--image2">
-                    <p>Eines meiner ersten Projekte mit Javascript - Schere, Stein, Papier gegen den Computer</p>
+                    <p>Wähle eine Option!</p>
+                        <button class="choice-btn" data-choice="Stein">Stein</button>
+                        <button class="choice-btn" data-choice="Papier">Papier</button>
+                        <button class="choice-btn" data-choice="Schere">Schere</button>
+                        <button class="choice-btn" data-choice="Bombe"> Bombe</button>
+                    <h3>Ergebniss:</h3>
+                        <p id="user-choice"></p>
+                        <p id="computer-choice"></p>
+                        <p id="result"></p>
+                    <p class="project--footer--p">Eines meiner ersten Projekte mit JavaScript - Schere, Stein, Papier!</p>
                 </details>
 
                 <details class="project">
@@ -75,7 +80,7 @@
                     <video controls>
                         <source src="videos/CC.mp4" type="video/mp4">
                     </video>
-                    <p>Eine kleine Übersicht über meine momentan, über Codecademy, abgeschlossenen Projekte.</p>
+                    <p class="project--footer--p">Eine kleine Übersicht über meine momentan, mit Codecademy, abgeschlossenen Projekte.</p>
                 </details>
             </section>
         </main>
@@ -83,5 +88,9 @@
         <footer>
                 <p>&copy;2025 D.L - Alle Rechte vorbehalten
         </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/schereSteinPapierTest.js"></script>
+
     </body>
 </html>
