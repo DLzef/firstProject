@@ -1,11 +1,8 @@
+// Rock paper scissors code
 const getUserChoice = userInput => {
-  userInput = userInput.toLowerCase();
 
-  if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
+  if (userInput === 'Stein' || userInput === 'Papier' || userInput === 'Schere' || userInput === 'Bombe') {
     return userInput;
-  } else {
-    console.log('Invalid input. Please choose "rock", "paper", or "scissors".');
-    return null; // Return null for invalid input
   }
 };
 
@@ -14,49 +11,47 @@ const getComputerChoice = () => {
   let randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
     case 0:
-      return 'rock';
+      return 'Stein';
     case 1:
-      return 'paper';
+      return 'Papier';
     case 2:
-      return 'scissors';
-    default:
-      return 'rock';
+      return 'Schere';
   }
 };
 
 // Behaviour of the Variables 'rock', 'paper' and 'scissors' (with each other) 
 const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
-    return 'The game has ended in a Tie.';
+    return 'Das Spiel ended im Unentschieden!';
   }
-  if (userChoice === 'scissors' && computerChoice === 'rock') {
-    return 'You have lost this round.';
-  }else if (userChoice === 'scissors' && computerChoice === 'paper') {
-    return 'You have won this round.';
+  if (userChoice === 'Schere' && computerChoice === 'Stein') {
+    return 'Du hast verloren.';
+
+  }else if (userChoice === 'Schere' && computerChoice === 'Papier') {
+    return 'Du hast gewonnen!';
   }
-  if (userChoice === 'rock' && computerChoice === 'scissors') {
-    return 'You have won this round.';
-  }else if (userChoice === 'rock' && computerChoice === 'paper'){
-    return 'You have lost this round.';
+  if (userChoice === 'Stein' && computerChoice === 'Papier') {
+    return 'Du hast verloren.';
+
+  }else if (userChoice === 'Stein' && computerChoice === 'Schere'){
+    return 'Du hast gewonnen!';
   }
-  if (userChoice === 'paper' && computerChoice === 'rock') {
-    return 'You have won this round.';
-  }else if (userChoice === 'paper' && computerChoice === 'scissors') {
-    return 'You have lost this round.';
+  if (userChoice === 'Papier' && computerChoice === 'Stein') {
+    return 'Du hast gewonnen!';
+
+  }else if (userChoice === 'Papier' && computerChoice === 'Schere') {
+    return 'Du hast verloren.';
   }
-  if (userChoice === 'bomb') {
-    return 'You have won this round.';
+  if (userChoice === 'Bombe') {
+    return 'Du hast gewonnen!';
   }
 };
 
 const playGame = (userInput) => {
   const userChoice = getUserChoice(userInput);
-  if (!userChoice) {
-  return; // Exit's if user input is invalid.
-  }
   const computerChoice = getComputerChoice();
-  document.getElementById('user-choice').textContent = `You chose: ${userChoice}`;
-  document.getElementById('computer-choice').textContent = `Computer chose: ${computerChoice}`;
+  document.getElementById('user-choice').textContent = `Deine Auswahl: ${userChoice}`;
+  document.getElementById('computer-choice').textContent = `Die Auswahl des Computers: ${computerChoice}`;
   document.getElementById('result').textContent = determineWinner(userChoice, computerChoice);
 };
 
